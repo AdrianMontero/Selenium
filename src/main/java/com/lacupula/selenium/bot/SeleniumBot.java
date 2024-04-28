@@ -4,6 +4,7 @@
 
 package com.lacupula.selenium.bot;
 
+import com.lacupula.selenium.bot.vista.Login;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,9 +17,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SeleniumBot {
 
     public static void main(String[] args) throws InterruptedException {
+        Login vLogin = new Login();
+        vLogin.setVisible(true);
         System.out.println("Hello World!");
         WebDriver driver = new ChromeDriver();
-        driver.get("https://www.selenium.dev/selenium/web/web-form.html");
+        driver.get("https://lobby.ogame.gameforge.com/es_ES/");
         Thread.sleep(4000);
     }
 }
